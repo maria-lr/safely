@@ -38,7 +38,7 @@ button {
   align-items: center;
   padding: 10px;
   width: 100vw;
-  height: 35px;
+  height: 8%;
   background-color: #fff;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
   z-index: 999;
@@ -67,7 +67,7 @@ button {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin: 3%;
+  /* margin: 3%; */
 }
 
 #searchbutton {
@@ -86,6 +86,51 @@ button {
   display: flex;
   justify-content: center;
 }
+
+#sent {
+  font-size: 1rem;
+  color: whitesmoke;
+  background-color: #CB2797;
+  padding: 1rem;
+  text-align: center;
+  width: 5rem;
+  margin-right: 5%;
+  border-radius: .5rem;
+  float: right;
+}
+
+#sent:hover {
+  color: #CB2797;
+  background-color: whitesmoke;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+#commentbox {
+  background-color: #fff;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 10px;
+  margin: 5%;
+  border-radius: .5rem;
+}
+
+label {
+  margin: 5%;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 700;
+  color: #CB2797;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+}
+
+/* .comments {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+} */
 
 /* Placeholder color code from w3schools:  https://www.w3schools.com/howto/howto_css_placeholder.asp*/
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -179,16 +224,28 @@ body:not(.user-is-tabbing) textarea:focus {
 @media only screen and (max-width: 560px) {
  
   h1 {
-    font-size: 2.5rem;
+    font-size: 1.2rem;
+    margin-top: 1rem;
   }
 
   p {
     font-size: 1rem;
+    margin: 0;
+  }
+
+  .profile-page-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
   }
 
   .pitems-container {
-    width: 80%;
-    text-align: center;
+    width: 100%;
+  }
+
+  .pitems {
+    display: flex;
+    align-items: flex-start;
   }
 
   #logo {
@@ -203,5 +260,30 @@ body:not(.user-is-tabbing) textarea:focus {
     width: 20%;
     justify-content: flex-end;
   }
+
+  .cardLook {
+    width: 100vw;
+  }
+/* 
+  .cardContainer{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+  } */
+
+  .thumbnail {
+    width: 100%;
+  }
+
+  /* .textside {
+    text-align: left;
+
+  } */
+
+  .text {
+    margin: 5%;
+  }
+
+
 
 }

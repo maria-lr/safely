@@ -17,6 +17,7 @@ h1 {
 p {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
+  margin-bottom: 0;
 }
 
 
@@ -39,7 +40,7 @@ button {
   align-items: center;
   padding: 10px;
   width: 100vw;
-  height: 35px;
+  height: 8%;
   background-color: #fff;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
   z-index: 999;
@@ -88,31 +89,10 @@ button {
   justify-content: center;
 }
 
-/* Placeholder color code from w3schools:  https://www.w3schools.com/howto/howto_css_placeholder.asp*/
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #000000;
-  opacity: 0.5; /* Firefox */
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
-  font-size: 2rem;
-  /* padding-left: 1rem; */
+.cardLook {
+  /* margin: 10px; */
 }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color:  rgba(255, 255, 255, 0.5);
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
-  font-size: 2rem;
-  /* padding-left: 1rem; */
-}
-
-::-ms-input-placeholder { /* Microsoft Edge */
-  color: rgba(0, 255, 255, 0.5);
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
-  font-size: 2rem;
-  /* padding-left: 1rem; */
-}
 
 /* Code below from: https://medium.com/hackernoon/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2 . This, along with the accompanying JS code will allow keyboard-only users to have the ring focus on for buttons. */
 
@@ -181,16 +161,21 @@ body:not(.user-is-tabbing) textarea:focus {
 @media only screen and (max-width: 560px) {
  
   h1 {
-    font-size: 2.5rem;
+    font-size: 1.2rem;
   }
 
   p {
     font-size: 1rem;
   }
 
+  .results-page-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
+  }
+
   .ritems-container {
-    width: 80%;
-    text-align: center;
+    width: 90%;
   }
 
   #logo {
@@ -204,6 +189,21 @@ body:not(.user-is-tabbing) textarea:focus {
   #button-container{
     width: 20%;
     justify-content: flex-end;
+  }
+
+  .cardContainer{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+  }
+
+  .thumbnail {
+    width: 33%;
+  }
+
+  .textside {
+    text-align: left;
+
   }
 
 }
