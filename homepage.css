@@ -19,12 +19,8 @@ p {
   font-weight: 400;
 }
 
-button:hover {
+#searchbutton:hover {
   color: whitesmoke;
-}
-
-.openbtn {
-  margin-right: 1.5rem;
 }
 
 #header {
@@ -36,36 +32,22 @@ button:hover {
   align-items: center;
   padding: 10px;
   width: 100%;
-  height: 5%;
+  height: 40px;
   background-color: #fff;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
   z-index: 999;
 }
 
 #topnav {
-  width: 5%;
+  font-size: 2rem;
   color: #CB2797;
+  background-color: rgb(255, 255, 255, 0);
+  width: 70px;
 }
 
 #logo {
-  width: 7%;
+  width: 100px;
 }
-
-
-/* @keyframes click {
-  20%{transform: translateY(1px);}
-  40%{transform: translateY(2px);}
-  60%{transform: translateY(4px);}
-  80%{transform: translateY(1px);}
-}
-
-#searchbutton {
-  animation-name: click;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-} */
-
-
 
 .front-page-container {
   /* background-image: url(./images/recipe-bg.jpg); */
@@ -89,7 +71,7 @@ button:hover {
   padding: 3.33rem;
 }
 
-button {
+#searchbutton {
   font-size: 2rem;
   color: #CB2797;
   background-color: rgb(255, 255, 255, 0);
@@ -97,32 +79,6 @@ button {
   text-align: center;
   width: 2rem;
   margin-left: .2rem;
-}
-
-/* Placeholder color code from w3schools:  https://www.w3schools.com/howto/howto_css_placeholder.asp*/
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #000000;
-  opacity: 0.5; /* Firefox */
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
-  font-size: 2rem;
-  /* padding-left: 1rem; */
-}
-
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color:  rgba(255, 255, 255, 0.5);
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
-  font-size: 2rem;
-  /* padding-left: 1rem; */
-}
-
-::-ms-input-placeholder { /* Microsoft Edge */
-  color: rgba(0, 255, 255, 0.5);
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
-  font-size: 2rem;
-  /* padding-left: 1rem; */
 }
 
 /* Code below from: https://medium.com/hackernoon/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2 . This, along with the accompanying JS code will allow keyboard-only users to have the ring focus on for buttons. */
@@ -137,79 +93,6 @@ body:not(.user-is-tabbing) textarea:focus {
 /* Desktop view */
 @media only screen and (min-width: 1025px) {
   /* Front page */
-  h1 {
-    font-size: 3rem;
-  }
-
-  p {
-    font-size: 1rem;
-  }
-
-  .fpitems-container {
-    width: 80%;
-    text-align: center;
-  }
-
-  #searchbar {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 400;
-    font-size: 2rem;
-    color: black;
-    background-color:  whitesmoke;
-    max-width: 55rem;
-    min-width: 45rem;
-    height: 4rem;
-    margin-left: 1.5rem;
-    margin-right: .5rem;
-    padding-left: 1rem;
-    border-radius: .4rem;
-  }
-
-  #logo {
-    margin-left: 1.5%;
-    width: 9%;
-  }
-
-}
-
-
-/* Tablet view */
-@media only screen and (min-width: 561px) and (max-width: 1024px) {
-  h1 {
-    font-size: 3rem;
-  }
-
-  p {
-    font-size: 1rem;
-  }
-
-  .fpitems-container {
-    width: 70%;
-    text-align: center;
-  }
-
-  #searchbar {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 400;
-    font-size: 2rem;
-    background-color:  whitesmoke;
-    min-width: 25rem;
-    max-width: 45rem;
-    height: 4rem;
-    margin-left: 1.5rem;
-    margin-right: .2rem;
-    padding-left: 1rem;
-    border-radius: .4rem;
-  }
-
-  #logo {
-    width: 15%;
-  }
-
-}
-
-/* Mobile view */
-@media only screen and (max-width: 560px) {
   h1 {
     font-size: 2.5rem;
   }
@@ -226,7 +109,135 @@ body:not(.user-is-tabbing) textarea:focus {
   #searchbar {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
+    font-size: 1.5rem;
+    color: black;
+    background-color:  whitesmoke;
+    max-width: 55rem;
+    min-width: 45rem;
+    height: 4rem;
+    margin-left: 1.5rem;
+    margin-right: .5rem;
+    padding-left: 1rem;
+    border-radius: .4rem;
+  }
+
+  #search-container{
+    width: 35%;
+  }
+
+  #button-container{
+    width: 20%;
+    justify-content: flex-end;
+  }
+
+/* Placeholder color code from w3schools:  https://www.w3schools.com/howto/howto_css_placeholder.asp*/
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #000000;
+    opacity: 0.5; /* Firefox */
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:  rgba(255, 255, 255, 0.5);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
+
+}
+
+
+/* Tablet view */
+@media only screen and (min-width: 561px) and (max-width: 1024px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .fpitems-container {
+    width: 70%;
+    text-align: center;
+  }
+
+  #searchbar {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    background-color:  whitesmoke;
+    min-width: 25rem;
+    max-width: 45rem;
+    height: 4rem;
+    margin-left: 1.5rem;
+    margin-right: .2rem;
+    padding-left: 1rem;
+    border-radius: .4rem;
+  }
+
+  #search-container{
+    width: 45%;
+  }
+
+  #button-container{
+    width: 20%;
+    justify-content: flex-end;
+  }
+
+  /* Placeholder color code from w3schools:  https://www.w3schools.com/howto/howto_css_placeholder.asp*/
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #000000;
+    opacity: 0.5; /* Firefox */
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:  rgba(255, 255, 255, 0.5);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+  }
+
+}
+
+/* Mobile view */
+@media only screen and (max-width: 560px) {
+  h1 {
     font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .fpitems-container {
+    width: 80%;
+    text-align: center;
+  }
+
+  #searchbar {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
     background-color:  whitesmoke;
     width: 20rem;
     height: 4rem;
@@ -242,4 +253,35 @@ body:not(.user-is-tabbing) textarea:focus {
     width: 20%;
   }
 
+  #search-container{
+    width: 50%;
+  }
+
+  #button-container{
+    width: 20%;
+    justify-content: flex-end;
+  }
+
+    /* Placeholder color code from w3schools:  https://www.w3schools.com/howto/howto_css_placeholder.asp*/
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: #000000;
+      opacity: 0.5; /* Firefox */
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 400;
+      font-size: 1.2rem;
+    }
+    
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color:  rgba(255, 255, 255, 0.5);
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 400;
+      font-size: 1.2rem;
+    }
+    
+    ::-ms-input-placeholder { /* Microsoft Edge */
+      color: rgba(255, 255, 255, 0.5);
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 400;
+      font-size: 1.2rem;
+    }
 }
