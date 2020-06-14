@@ -29,6 +29,10 @@ button {
   margin-left: .2rem;
 }
 
+#logo {
+  width: 100px;
+}
+
 #header {
   position: fixed;
   transition: top 0.3s;
@@ -38,7 +42,7 @@ button {
   align-items: center;
   padding: 10px;
   width: 100vw;
-  height: 8%;
+  height: 40px;
   background-color: #fff;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
   z-index: 999;
@@ -67,7 +71,6 @@ button {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  /* margin: 3%; */
 }
 
 #searchbutton {
@@ -94,9 +97,7 @@ button {
   padding: 1rem;
   text-align: center;
   width: 5rem;
-  margin-right: 5%;
   border-radius: .5rem;
-  float: right;
 }
 
 #sent:hover {
@@ -112,12 +113,15 @@ button {
   font-weight: 400;
   font-size: 1rem;
   padding: 10px;
-  margin: 5%;
+  /* margin: 5%; */
   border-radius: .5rem;
 }
 
+.text {
+  margin: 0 5% 2% 5%;
+}
+
 label {
-  margin: 5%;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 700;
   color: #CB2797;
@@ -126,36 +130,8 @@ label {
   letter-spacing: .05rem;
 }
 
-/* .comments {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-} */
-
-/* Placeholder color code from w3schools:  https://www.w3schools.com/howto/howto_css_placeholder.asp*/
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #000000;
-  opacity: 0.5; /* Firefox */
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
-  font-size: 2rem;
-  /* padding-left: 1rem; */
-}
-
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color:  rgba(255, 255, 255, 0.5);
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
-  font-size: 2rem;
-  /* padding-left: 1rem; */
-}
-
-::-ms-input-placeholder { /* Microsoft Edge */
-  color: rgba(0, 255, 255, 0.5);
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
-  font-size: 2rem;
-  /* padding-left: 1rem; */
+.comment-container {
+  margin: 0 5% 5% 5%;
 }
 
 /* Code below from: https://medium.com/hackernoon/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2 . This, along with the accompanying JS code will allow keyboard-only users to have the ring focus on for buttons. */
@@ -170,26 +146,64 @@ body:not(.user-is-tabbing) textarea:focus {
 /* Desktop view */
 @media only screen and (min-width: 1025px) {
   /* Front page */
-  #search-container{
-    width: 40%;
-  }
 
   h1 {
-    font-size: 3rem;
+    font-size: 1.2rem;
+    margin-top: 1rem;
   }
 
   p {
     font-size: 1rem;
+    margin: 0;
   }
 
-  .profile-page-container {
-    width: 80%;
-    text-align: center;
+  .profile-page-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
   }
 
-  #logo {
-    margin-left: 1.5%;
-    width: 9%;
+  .pitems-container {
+    width: 100%;
+  }
+
+  .pitems {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  #search-container{
+    width: 35%;
+  }
+
+  #button-container{
+    width: 20%;
+    justify-content: flex-end;
+  }
+
+  .cardLook {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+  }
+
+  .thumbnail {
+    max-width: 60vw;
+    border-radius: .5rem;
+  }
+
+  .text {
+    width: 60vw; 
+  }
+
+  #commentbox {
+    width: 60vw;
+  }
+
+  .comment-container {
+    width: 60vw;
+    margin: auto;
   }
 
 }
@@ -197,25 +211,66 @@ body:not(.user-is-tabbing) textarea:focus {
 
 /* Tablet view */
 @media only screen and (min-width: 561px) and (max-width: 1024px) {
-  #search-container{
-    width: 40%;
-  }
 
   h1 {
-    font-size: 3rem;
+    font-size: 1.2rem;
+    margin-top: 1rem;
   }
 
   p {
     font-size: 1rem;
+    margin: 0;
+  }
+
+  .profile-page-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
   }
 
   .pitems-container {
-    width: 70%;
-    text-align: center;
+    width: 100%;
   }
 
-  #logo {
-    width: 15%;
+  .pitems {
+    display: flex;
+    align-items: flex-start;
+  }
+
+
+  #search-container{
+    width: 45%;
+  }
+
+  #button-container{
+    width: 20%;
+    justify-content: flex-end;
+  }
+
+
+  .cardLook {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+  }
+
+  .thumbnail {
+    max-width: 70vw;
+    border-radius: .5rem;
+  }
+
+  .text {
+    width: 70vw; 
+  }
+  
+  #commentbox {
+    width: 70vw;
+  }
+
+  .comment-container {
+    width: 70vw;
+    margin: auto;
   }
 
 }
@@ -236,7 +291,7 @@ body:not(.user-is-tabbing) textarea:focus {
   .profile-page-container{
     display: flex;
     justify-content: center;
-    margin-top: 15%;
+    margin-top: 50px;
   }
 
   .pitems-container {
@@ -248,12 +303,8 @@ body:not(.user-is-tabbing) textarea:focus {
     align-items: flex-start;
   }
 
-  #logo {
-    width: 20%;
-  }
-
   #search-container{
-    width: 35%;
+    width: 50%;
   }
 
   #button-container{
@@ -264,26 +315,9 @@ body:not(.user-is-tabbing) textarea:focus {
   .cardLook {
     width: 100vw;
   }
-/* 
-  .cardContainer{
-    display: flex;
-    align-items: center;
-    margin: 20px;
-  } */
 
   .thumbnail {
     width: 100%;
   }
-
-  /* .textside {
-    text-align: left;
-
-  } */
-
-  .text {
-    margin: 5%;
-  }
-
-
 
 }

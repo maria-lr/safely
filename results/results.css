@@ -31,6 +31,10 @@ button {
   margin-left: .2rem;
 }
 
+#logo {
+  width: 100px;
+}
+
 #header {
   position: fixed;
   transition: top 0.3s;
@@ -40,7 +44,7 @@ button {
   align-items: center;
   padding: 10px;
   width: 100vw;
-  height: 8%;
+  height: 40px;
   background-color: #fff;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
   z-index: 999;
@@ -65,12 +69,12 @@ button {
   
 }
 
-.button-container {
+/* .button-container {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   margin: 3%;
-}
+} */
 
 #searchbutton {
   padding: 2px;
@@ -107,26 +111,38 @@ body:not(.user-is-tabbing) textarea:focus {
 @media only screen and (min-width: 1025px) {
   /* Front page */
   #search-container{
-    width: 40%;
+    width: 35%;
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: 1.2rem;
+    margin-top: 1rem;
   }
 
   p {
     font-size: 1rem;
+    margin: 0;
   }
 
   .results-page-container {
-    width: 80%;
-    text-align: center;
+    margin-top: 100px;
   }
 
+  #button-container{
+    width: 20%;
+    justify-content: flex-end;
+  }
 
-  #logo {
-    margin-left: 1.5%;
-    width: 9%;
+  .ritems-container {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+  }
+
+  .cardContainer{
+    display: flex;
+    align-items: center;
+    margin: 20px 20px 40px 20px;
   }
 
 }
@@ -135,26 +151,38 @@ body:not(.user-is-tabbing) textarea:focus {
 /* Tablet view */
 @media only screen and (min-width: 561px) and (max-width: 1024px) {
   #search-container{
-    width: 40%;
+    width: 45%;
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: 1.2rem;
+    margin-top: 1rem;
   }
 
   p {
     font-size: 1rem;
+    margin: 0;
   }
 
   .ritems-container {
     width: 70%;
     text-align: center;
+    margin: auto;
   }
 
-  #logo {
-    width: 15%;
+  .thumbnail {
+    width: 40vw;
   }
 
+  /* .textside {
+    margin-bottom: 10px;
+  } */
+
+  .cardContainer{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+  }
 }
 
 /* Mobile view */
@@ -162,10 +190,12 @@ body:not(.user-is-tabbing) textarea:focus {
  
   h1 {
     font-size: 1.2rem;
+    margin-top: 1rem;
   }
 
   p {
     font-size: 1rem;
+    margin: 0;
   }
 
   .results-page-container{
@@ -178,12 +208,8 @@ body:not(.user-is-tabbing) textarea:focus {
     width: 90%;
   }
 
-  #logo {
-    width: 20%;
-  }
-
   #search-container{
-    width: 35%;
+    width: 50%;
   }
 
   #button-container{
