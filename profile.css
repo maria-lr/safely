@@ -19,7 +19,7 @@ p {
   font-weight: 400;
 }
 
-button {
+#searchbutton {
   font-size: 2rem;
   color: #CB2797;
   background-color: rgb(255, 255, 255, 0);
@@ -27,6 +27,13 @@ button {
   text-align: center;
   width: 2rem;
   margin-left: .2rem;
+}
+
+#topnav {
+  font-size: 2rem;
+  color: #CB2797;
+  background-color: rgb(255, 255, 255, 0);
+  width: 70px;
 }
 
 #logo {
@@ -46,10 +53,6 @@ button {
   background-color: #fff;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
   z-index: 999;
-}
-
-#topnav {
-  width: 5%;
 }
 
 #navtitle {
@@ -160,7 +163,7 @@ body:not(.user-is-tabbing) textarea:focus {
   .profile-page-container{
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 100px;
   }
 
   .pitems-container {
@@ -170,6 +173,8 @@ body:not(.user-is-tabbing) textarea:focus {
   .pitems {
     display: flex;
     align-items: flex-start;
+    width: 70vw;
+    margin: auto;
   }
 
   #search-container{
@@ -183,27 +188,30 @@ body:not(.user-is-tabbing) textarea:focus {
 
   .cardLook {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100vw;
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+    /* width: 100vw; */
   }
 
   .thumbnail {
-    max-width: 60vw;
+    max-width: 60%;
     border-radius: .5rem;
   }
 
   .text {
-    width: 60vw; 
+    align-self: center;
   }
 
   #commentbox {
-    width: 60vw;
+    width: 90%;
+    height: 100px;
   }
 
   .comment-container {
-    width: 60vw;
+    margin-top: 20px;
+    width: 70vw;
     margin: auto;
+    padding-top: 40px;
   }
 
 }

@@ -17,11 +17,9 @@ h1 {
 p {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400;
-  margin-bottom: 0;
 }
 
-
-button {
+#searchbutton {
   font-size: 2rem;
   color: #CB2797;
   background-color: rgb(255, 255, 255, 0);
@@ -29,6 +27,13 @@ button {
   text-align: center;
   width: 2rem;
   margin-left: .2rem;
+}
+
+#topnav {
+  font-size: 2rem;
+  color: #CB2797;
+  background-color: rgb(255, 255, 255, 0);
+  width: 70px;
 }
 
 #logo {
@@ -50,10 +55,6 @@ button {
   z-index: 999;
 }
 
-#topnav {
-  width: 5%;
-}
-
 #navtitle {
   width: 80%;
 }
@@ -69,12 +70,11 @@ button {
   
 }
 
-/* .button-container {
+.button-container {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin: 3%;
-} */
+}
 
 #searchbutton {
   padding: 2px;
@@ -88,13 +88,28 @@ button {
   color: darkviolet;
 }
 
-#search-container{
+#search-container {
   display: flex;
   justify-content: center;
 }
 
-.cardLook {
-  /* margin: 10px; */
+.cardContainer {
+  display: flex;
+  align-items: center;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 0.5em;
+}
+
+/* .cardContainer:hover {
+  color: rgba(255, 255, 255, 0.8);
+} */
+
+.thumbnail {
+  border-radius: .5rem 0 0 .5rem;
+}
+
+.results-page-container {
+  margin-top: 100px;
 }
 
 
@@ -116,7 +131,7 @@ body:not(.user-is-tabbing) textarea:focus {
 
   h1 {
     font-size: 1.2rem;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
   }
 
   p {
@@ -135,14 +150,20 @@ body:not(.user-is-tabbing) textarea:focus {
 
   .ritems-container {
     width: 50%;
-    text-align: center;
+    /* text-align: center; */
     margin: auto;
   }
 
   .cardContainer{
-    display: flex;
-    align-items: center;
     margin: 20px 20px 40px 20px;
+  }
+
+  .thumbnail {
+    width: 45%;
+  }
+
+  .textside{
+    margin-left: 10%;
   }
 
 }
@@ -156,7 +177,7 @@ body:not(.user-is-tabbing) textarea:focus {
 
   h1 {
     font-size: 1.2rem;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
   }
 
   p {
@@ -166,22 +187,20 @@ body:not(.user-is-tabbing) textarea:focus {
 
   .ritems-container {
     width: 70%;
-    text-align: center;
+    /* text-align: center; */
     margin: auto;
   }
 
   .thumbnail {
-    width: 40vw;
+    width: 45%;
   }
 
-  /* .textside {
-    margin-bottom: 10px;
-  } */
-
-  .cardContainer{
-    display: flex;
-    align-items: center;
+  .cardContainer {
     margin: 20px;
+  }
+
+  .textside {
+    margin-left: 20px;
   }
 }
 
@@ -190,7 +209,7 @@ body:not(.user-is-tabbing) textarea:focus {
  
   h1 {
     font-size: 1.2rem;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
   }
 
   p {
@@ -218,18 +237,16 @@ body:not(.user-is-tabbing) textarea:focus {
   }
 
   .cardContainer{
-    display: flex;
-    align-items: center;
     margin: 20px;
   }
 
   .thumbnail {
-    width: 33%;
+    width: 45%;
   }
 
   .textside {
     text-align: left;
-
+    margin-left: 20px;
   }
 
 }

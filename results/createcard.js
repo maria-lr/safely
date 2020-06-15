@@ -1,14 +1,14 @@
 function createCard(place) {
 
   let newCard = $('<div></div>')
-    .addClass('cardContainer row');
+    .addClass('cardContainer');
 
   let thumbnail = $('<img>')
     .attr('src', place.thumbnail)
-    .addClass('thumbnail col')
+    .addClass('thumbnail')
 
   let textSide = $('<div></div>')
-    .addClass('textside col')
+    .addClass('textside')
 
   let nameHeader = $('<h1></h1>')
     .text(place.name);
