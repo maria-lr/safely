@@ -93,50 +93,6 @@ p {
   justify-content: center;
 }
 
-#sent {
-  font-size: 1rem;
-  color: whitesmoke;
-  background-color: #CB2797;
-  padding: 1rem;
-  text-align: center;
-  width: 5rem;
-  border-radius: .5rem;
-}
-
-#sent:hover {
-  color: #CB2797;
-  background-color: whitesmoke;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-}
-
-#commentbox {
-  background-color: #fff;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  padding: 10px;
-  /* margin: 5%; */
-  border-radius: .5rem;
-}
-
-.text {
-  margin: 0 5% 2% 5%;
-}
-
-label {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 700;
-  color: #CB2797;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  letter-spacing: .05rem;
-}
-
-.comment-container {
-  margin: 0 5% 5% 5%;
-}
-
 /* No results section styling - appears if no results found in search bar*/
 .add-place-button {
   font-size: 1rem;
@@ -171,6 +127,7 @@ label {
 }
 /* End of no results section */
 
+
 /* Code below from: https://medium.com/hackernoon/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2 . This, along with the accompanying JS code will allow keyboard-only users to have the ring focus on for buttons. */
 
 body:not(.user-is-tabbing) button:focus,
@@ -183,77 +140,10 @@ body:not(.user-is-tabbing) textarea:focus {
 /* Desktop view */
 @media only screen and (min-width: 1025px) {
   /* Front page */
-
-  h1 {
-    font-size: 1.2rem;
-    margin-top: 1rem;
-  }
-
-  p {
-    font-size: 1rem;
-    margin: 0;
-  }
-
-  .profile-page-container{
-    display: flex;
-    justify-content: center;
-    margin-top: 100px;
-  }
-
-  .pitems-container {
-    width: 100%;
-  }
-
-  .pitems {
-    display: flex;
-    align-items: flex-start;
-    width: 70vw;
-    margin: auto;
-  }
-
   #search-container{
     width: 35%;
   }
 
-  #button-container{
-    width: 20%;
-    justify-content: flex-end;
-  }
-
-  .cardLook {
-    display: flex;
-    /* flex-wrap: wrap; */
-    /* justify-content: center; */
-    /* width: 100vw; */
-  }
-
-  .thumbnail {
-    max-width: 60%;
-    border-radius: .5rem;
-  }
-
-  .text {
-    align-self: center;
-  }
-
-  #commentbox {
-    width: 90%;
-    height: 100px;
-  }
-
-  .comment-container {
-    margin-top: 20px;
-    width: 70vw;
-    margin: auto;
-    padding-top: 40px;
-  }
-
-}
-
-
-/* Tablet view */
-@media only screen and (min-width: 561px) and (max-width: 1024px) {
-
   h1 {
     font-size: 1.2rem;
     margin-top: 1rem;
@@ -264,55 +154,27 @@ body:not(.user-is-tabbing) textarea:focus {
     margin: 0;
   }
 
-  .profile-page-container{
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-  }
-
-  .pitems-container {
-    width: 100%;
-  }
-
-  .pitems {
-    display: flex;
-    align-items: flex-start;
-  }
-
-
-  #search-container{
-    width: 45%;
-  }
-
   #button-container{
     width: 20%;
     justify-content: flex-end;
   }
 
+}
 
-  .cardLook {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100vw;
+/* Tablet view */
+@media only screen and (min-width: 561px) and (max-width: 1024px) {
+  #search-container{
+    width: 45%;
   }
 
-  .thumbnail {
-    max-width: 70vw;
-    border-radius: .5rem;
+  h1 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
   }
 
-  .text {
-    width: 70vw; 
-  }
-  
-  #commentbox {
-    width: 70vw;
-  }
-
-  .comment-container {
-    width: 70vw;
-    margin: auto;
+  p {
+    font-size: 1rem;
+    margin: 0;
   }
 
 }
@@ -330,36 +192,8 @@ body:not(.user-is-tabbing) textarea:focus {
     margin: 0;
   }
 
-  .profile-page-container{
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-  }
-
-  .pitems-container {
-    width: 100%;
-  }
-
-  .pitems {
-    display: flex;
-    align-items: flex-start;
-  }
-
-  #search-container{
-    width: 50%;
-  }
-
   #button-container{
     width: 20%;
     justify-content: flex-end;
   }
-
-  .cardLook {
-    width: 100vw;
-  }
-
-  .thumbnail {
-    width: 100%;
-  }
-
 }

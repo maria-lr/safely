@@ -125,3 +125,84 @@ p {
   background-color: whitesmoke;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
+
+/* Desktop view */
+@media only screen and (min-width: 1025px) {
+
+  h1 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  #search-container{
+    width: 35%;
+  }
+
+  #button-container{
+    width: 20%;
+    justify-content: flex-end;
+  }
+
+
+  /* .cardLook {
+    display: flex; */
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
+    /* width: 100vw; */
+  /* } */
+
+}
+
+
+/* Tablet view */
+@media only screen and (min-width: 561px) and (max-width: 1024px) {
+
+  h1 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+
+  #search-container{
+    width: 45%;
+  }
+
+  #button-container{
+    width: 20%;
+    justify-content: flex-end;
+  }
+}
+
+/* Mobile view */
+@media only screen and (max-width: 560px) {
+ 
+  h1 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  #search-container{
+    width: 50%;
+  }
+
+  #button-container{
+    width: 20%;
+    justify-content: flex-end;
+  }
+
+}
