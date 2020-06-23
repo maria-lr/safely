@@ -1,38 +1,84 @@
-placesArray.forEach(function (place) {
-  // For each item in the array create a card. 
-  createCard(place);
-})
+let placesArray = []
 
-// if search results are empty, insert/replace "results" area with no results message and add new place button
+// Get all data from database
+fetch(`https://tiny-lasagna-server.herokuapp.com/collections/mariaTestCollection/`)
+  .then((results) => {
+    return results.json();
+  })
+  .then((allDataFromServer) => {
+    console.log("This is everything in our collection!", allDataFromServer)
 
-// Need to create a form with the data that will fill this out... Should appear after add button is clicked
+    placesArray = allDataFromServer;
+    console.log('test inside fetch')
 
-const addPlace = $('')
-addPlace.onclick = function (event) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const search = urlParams.get('search');
 
-  const newPlaceData = {
+    console.log("The ID param is...", search)
 
-  }
+    console.log('search', search)
+
+    console.log('testing outside of array filter')
+
+    // Find search term (taken from query param) in places array.
+    let searchResults = placesArray.filter(function (place, index) {
+      console.log('testing inside of array filter')
+      const lowerName = place.name.toLowerCase();
+      const lowerSearch = search.toLowerCase();
+
+      console.log(`For iteration ${index}, does ${lowerName} include ${lowerSearch}. The answer is ${lowerName.includes(lowerSearch)}`);
+
+      return lowerName.includes(lowerSearch);
+
+    })
+
+    // If there are results matching the search, load results.
+    if (searchResults.length) {
+      console.log('search results boolean', searchResults.length)
+
+      searchResults.forEach(function (place) {
+        console.log("Creating a card for plaec: ", place)
+        // For each item in the array create a card. 
+        createCard(place);
+
+      });
+
+      $('.add-place-button').click(function (event) {
+
+        window.location.replace('file:///Users/maria/Documents/Coding%20Projects/Safely/form.html')
+      });
+
+    };
+  })
 
 
-  async function addNewDataToServer() {
-    const postOptions = {
-      method: "POST",
-      body: JSON.stringify(newPlaceData),
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      }
+// If there are no results matching the search, display the no results text and add place button
+// console.log('Search results', searchResults);
+// if (!searchResults.length) {
+//   console.log('do i run?')
+
+//   window.location.replace(`file:///Users/maria/Documents/Coding%20Projects/Safely/results/noresults.html`)
+
+// }
+
+
+async function addNewDataToServer() {
+  const postOptions = {
+    method: "POST",
+    body: JSON.stringify(newPlaceData),
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
     }
-    // Send our POST request with its options
-    const postRequest = await fetch('url', postOptions);
-
-    // Turn our response into JSON
-    const result = await postRequest.json();
-
-    // Log it out!
-    console.log("The result of my POST IS...", result);
-
   }
-  // addNewDataToServer();
+  // Send our POST request with its options
+  const postRequest = await fetch('url', postOptions);
+
+  // Turn our response into JSON
+  const result = await postRequest.json();
+
+  // Log it out!
+  console.log("The result of my POST IS...", result);
+
 }
+  // addNewDataToServer();

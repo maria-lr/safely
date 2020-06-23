@@ -106,7 +106,7 @@ body:not(.user-is-tabbing) textarea:focus {
     text-align: center;
   }
 
-  #searchbar {
+  .searchbar {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
     font-size: 1.5rem;
@@ -171,7 +171,7 @@ body:not(.user-is-tabbing) textarea:focus {
     text-align: center;
   }
 
-  #searchbar {
+  .searchbar {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
     font-size: 1.3rem;
@@ -234,7 +234,7 @@ body:not(.user-is-tabbing) textarea:focus {
     text-align: center;
   }
 
-  #searchbar {
+  .searchbar {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
     font-size: 1.2rem;
