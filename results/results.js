@@ -30,7 +30,7 @@ fetch(`https://tiny-lasagna-server.herokuapp.com/collections/mariaTestCollection
 
       return lowerName.includes(lowerSearch);
 
-    })
+    });
 
     // If there are results matching the search, load results.
     if (searchResults.length) {
@@ -42,24 +42,32 @@ fetch(`https://tiny-lasagna-server.herokuapp.com/collections/mariaTestCollection
         createCard(place);
 
       });
+    }
+
+    // If there are no results matching the search, load no results message and add place button.
+    else {
+
+      const noResInner = $('<section></section>')
+        .addClass('no-res-inner');
+
+      const noResMessage = $('<p></p>')
+        .html(`Sorry, no results match this search.<br>`)
+        .addClass('message');
+
+      const addPlaceButton = $('<button></button>')
+        .text('Add new place')
+        .addClass('add-place-button');
+
+      $('.no-results-container').append(noResInner);
+      noResInner.append(noResMessage);
+      noResInner.append(addPlaceButton);
 
       $('.add-place-button').click(function (event) {
 
-        window.location.replace('file:///Users/maria/Documents/Coding%20Projects/Safely/form.html')
+        window.location.href = 'file:///Users/maria/Documents/Coding%20Projects/Safely/form.html';
       });
-
-    };
+    }
   })
-
-
-// If there are no results matching the search, display the no results text and add place button
-// console.log('Search results', searchResults);
-// if (!searchResults.length) {
-//   console.log('do i run?')
-
-//   window.location.replace(`file:///Users/maria/Documents/Coding%20Projects/Safely/results/noresults.html`)
-
-// }
 
 
 async function addNewDataToServer() {

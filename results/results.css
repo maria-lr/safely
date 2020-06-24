@@ -112,6 +112,39 @@ p {
   margin-top: 100px;
 }
 
+/* No results section styling - appears if no results found in search bar*/
+.add-place-button {
+  font-size: 1rem;
+  color: whitesmoke;
+  background-color: #CB2797;
+  padding: 1rem;
+  text-align: center;
+  border-radius: .5rem;
+  margin: 25px;
+}
+
+.add-place-button:hover {
+  color: #CB2797;
+  background-color: whitesmoke;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.no-res-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 300px;
+}
+
+.no-results-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+/* End of no results section */
 
 /* Code below from: https://medium.com/hackernoon/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2 . This, along with the accompanying JS code will allow keyboard-only users to have the ring focus on for buttons. */
 

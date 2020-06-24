@@ -1,9 +1,21 @@
+let placesArray = []
+
+// Get all data from database
+fetch(`https://tiny-lasagna-server.herokuapp.com/collections/mariaTestCollection/`)
+  .then((results) => {
+    return results.json();
+  })
+  .then((allDataFromServer) => {
+    console.log("This is everything in our collection!", allDataFromServer)
+
+    placesArray = allDataFromServer;
+  });
+
 $('#place-form').submit(function (event) {
   console.log('Submit: click!')
   event.preventDefault();
 
   async function sendDataToServer() {
-
 
     let newPlace = {
       name: $('#pname').val(),
@@ -16,11 +28,6 @@ $('#place-form').submit(function (event) {
       thumbnail: $('#image').val()
     }
 
-    // let newPlace = {
-    //   name: $('#pname').val(),
-    //   description: $('#desc').val()
-    // };
-
     const postOptions = {
       method: "POST",
       body: JSON.stringify(newPlace),
@@ -30,11 +37,25 @@ $('#place-form').submit(function (event) {
       }
     }
     console.log('new place', newPlace)
+
+    // Post new place to the server
     const postRequest = await fetch('https://tiny-lasagna-server.herokuapp.com/collections/mariaTestCollection', postOptions);
 
+    // Response from the server + id
     const result = await postRequest.json();
 
-    console.log("The result of my POST IS...", result);
+    console.log("The id of my newly created post is", result._id);
+
+    // _id
+    // const urlParams = new URLSearchParams(window.location.id);
+    // // grabs the thing after the question mark in the url
+    // const id = urlParams.get('id');
+
+    // console.log("The ID param is...", id)
+
+    // console.log('search', id)
+
+    window.location.href = `file:///Users/maria/Documents/Coding%20Projects/Safely/profile.html?id=${result._id}`;
 
 
     // result._id
