@@ -46,23 +46,9 @@ $('#place-form').submit(function (event) {
 
     console.log("The id of my newly created post is", result._id);
 
-    // _id
-    // const urlParams = new URLSearchParams(window.location.id);
-    // // grabs the thing after the question mark in the url
-    // const id = urlParams.get('id');
-
-    // console.log("The ID param is...", id)
-
-    // console.log('search', id)
-
     window.location.href = `file:///Users/maria/Documents/Coding%20Projects/Safely/profile.html?id=${result._id}`;
 
-
-    // result._id
-    // use query parameter, to go to a new html page to get this same data on a new page, bc i no longer have access to the data on the new html page.
-    // put @end of url ?
   };
 
   sendDataToServer();
 });
-// doesn't seem to add a new place object to my server... is this because the submit button is refreshing faster than the info can travel?

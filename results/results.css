@@ -100,9 +100,10 @@ p {
   border-radius: 0.5em;
 }
 
-/* .cardContainer:hover {
-  color: rgba(255, 255, 255, 0.8);
-} */
+.cardContainer:hover {
+  /* color: rgba(255, 255, 255, 0.8); */
+  cursor: pointer;
+}
 
 .thumbnail {
   border-radius: .5rem 0 0 .5rem;
@@ -189,6 +190,11 @@ body:not(.user-is-tabbing) textarea:focus {
 
   .cardContainer{
     margin: 20px 20px 40px 20px;
+  }
+
+  /* insert hover animation (click up a few pixels or something) */
+  .cardContainer:hover {
+    cursor: pointer;
   }
 
   .thumbnail {

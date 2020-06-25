@@ -9,16 +9,9 @@ fetch(`https://tiny-lasagna-server.herokuapp.com/collections/mariaTestCollection
     console.log("This is everything in our collection!", allDataFromServer)
 
     placesArray = allDataFromServer;
-    console.log('test inside fetch')
 
     const urlParams = new URLSearchParams(window.location.search);
     const search = urlParams.get('search');
-
-    console.log("The ID param is...", search)
-
-    console.log('search', search)
-
-    console.log('testing outside of array filter')
 
     // Find search term (taken from query param) in places array.
     let searchResults = placesArray.filter(function (place, index) {
@@ -41,7 +34,15 @@ fetch(`https://tiny-lasagna-server.herokuapp.com/collections/mariaTestCollection
         // For each item in the array create a card. 
         createCard(place);
 
+        // console.log("Place is:", place);
+        $('.cardContainer').click(function (event) {
+          window.location.href = `file:///Users/maria/Documents/Coding%20Projects/Safely/profile.html?id=${place._id}`
+        })
       });
+
+      console.log('search results', searchResults)
+
+
     }
 
     // If there are no results matching the search, load no results message and add place button.
