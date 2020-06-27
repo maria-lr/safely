@@ -23,16 +23,17 @@
     </section>
   </div>
   <div class='form'>
-    <form id='place-form'>
+    <form id='place-form' data-validate>
       <section>
         <label for="pname" class="label">Place name:</label>
         <br>
-        <input type="text" id="pname" name="pname" class="input">
+        <input type="text" id="pname" name="pname" class="input" placeholder="Name of location" required>
       </section><br>
 
       <section>
         <label for="desc" class="label">Description:</label><br>
-        <input id="descriptioninput" list="desc" type="text" name="desc" class="input">
+        <input id="descriptioninput" list="desc" type="text" name="desc" class="input" placeholder="Type of place"
+          required>
         <datalist id="desc" class="input">
           <option value="Supermarket"></option>
           <option value="Park"></option>
@@ -45,28 +46,57 @@
 
       <section>
         <label for="add1" class="label">Address:</label><br>
-        <input type="text" id="add1" name="add1" class="input"><br>
-        <input type="text" id="add2" name="add2" class="input">
+        <input type="text" id="add1" name="add1" class="input" placeholder="123 Example Lane" required><br>
+        <input type="text" id="add2" name="add2" class="input" placeholder="City, State 12345(Zip)" required>
       </section><br>
 
-      <section>
-        <label for="hours" class="label">Hours:</label><br>
-        <input type="text" id="hours" name="hours" class="input">
+      <section class=" hours">
+        <label for="hours" class="label, hourslabel">Hours:</label><br>
+
+        <select id="day1" name="day1" class="input" required>
+          <option value="mon">Monday</option>
+          <option value="tues">Tuesday</option>
+          <option value="wed">Wednesday</option>
+          <option value="thur">Thursday</option>
+          <option value="fri">Friday</option>
+          <option value="sat">Saturday</option>
+          <option value="sun">Sunday</option>
+        </select>
+        <h1 class="through">-</h1>
+        <select id="day2" name="day2" class="input" required>
+          <option value="mon">Monday</option>
+          <option value="tues">Tuesday</option>
+          <option value="wed">Wednesday</option>
+          <option value="thur">Thursday</option>
+          <option value="fri">Friday</option>
+          <option value="sat">Saturday</option>
+          <option value="sun">Sunday</option>
+        </select>
+        <br>
+
+        <!-- Must be a time in 24-hour format (many browsers include a native date picker for this) -->
+        <input type="time" name="time1" class="input" id="time1" required>
+        <h1 class="through">-</h1>
+        <input type="time" name="time2" class="input" id="time2" required>
+        <!-- <input type="text" id="hours" name="hours" class="input" required> -->
+
       </section><br>
 
       <section>
         <label for="phone" class="label">Phone:</label><br>
-        <input type="tel" id="phone" name="phone" class="input">
+        <!-- Phone number be in 555-555-5555 format -->
+        <input id="phone" type="text" name="tel" class="input" pattern="\d{3}[\-]\d{3}[\-]\d{4}"
+          data-bouncer-message="Please use the following format: 555-555-5555" placeholder="555-555-5555" required>
       </section><br>
 
       <section>
         <label for="website" class="label">Website:</label><br>
-        <input type="text" id="website" name="website" class="input">
+        <input type="url" id="website" name="website" class="input" placeholder="http://example.com" required>
       </section><br>
 
       <section>
         <label for="image" class="label">Image:</label><br>
-        <input type="text" id="image" name="image" class="input">
+        <input type="text" id="image" name="image" class="input" placeholder="Enter image url here" required>
       </section><br>
 
 
@@ -78,7 +108,10 @@
   <!-- <script src="getdata.js"></script> -->
   <script src="search.js"></script>
   <script src="createprofile.js"></script>
-  <script src="./results/createcard.js"></script>\
+  <script src="./results/createcard.js"></script>
+
+  <!-- Bouncer form validation script. Get a specific version -->
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/bouncer@1.4.6/dist/bouncer.polyfills.min.js"></script>
 </body>
 
 </html>

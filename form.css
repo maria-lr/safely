@@ -111,6 +111,48 @@ p {
   padding-left: 20px;
 }
 
+.hours {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  justify-content: flex-start;
+}
+
+.through {
+  display: flex;
+  width: 40px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  height: 20px;
+}
+
+#day1, #day2 {
+margin-bottom: 20px;
+}
+
+#day1, #day2, #time1, #time2 {
+  width: 120px;
+  margin-left: 0;
+}
+
+.hourslabel {
+  width: 400px;
+  height: 20px;
+}
+/* #day2 {
+  width: 120px;
+}
+
+#time1 {
+  width: 120px;
+}
+
+#time2 {
+  width: 120px;
+} */
+
+
 .sbutton {
   font-size: 1rem;
   color: whitesmoke;
@@ -125,6 +167,25 @@ p {
   background-color: whitesmoke;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
+
+
+input[type="submit"] :disabled {
+  background-color: gray;
+}
+
+.error {
+  border-color: red;
+}
+
+.error-message {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: red;
+  font-style: italic;
+  margin-bottom: 1em;
+}
+/* End form validation styling */
 
 /* Desktop view */
 @media only screen and (min-width: 1025px) {
