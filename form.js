@@ -37,3 +37,5 @@ async function sendDataToServer() {
 };
 
 document.addEventListener('bouncerFormValid', sendDataToServer)
+
+$('#phone').mask('(000) 000-0000')

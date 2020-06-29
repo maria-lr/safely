@@ -50,7 +50,6 @@ p {
 }
 
 .front-page-container {
-  /* background-image: url(./images/recipe-bg.jpg); */
   background-color: #92C6E9;
   background-size: cover;
   display: flex;
@@ -59,14 +58,12 @@ p {
   flex-wrap: wrap;
   height: 100vh;
   width: 100vw;
-  /* background-color: #1874CD; */
 }
 
 .fpitems-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* text-align: left; */
   flex-wrap: wrap;
   padding: 3.33rem;
 }
@@ -247,10 +244,6 @@ body:not(.user-is-tabbing) textarea:focus {
     margin-right: .2rem;
     padding-left: 1rem;
     border-radius: .4rem;
-  }
-
-  #logo {
-    width: 20%;
   }
 
   #search-container{

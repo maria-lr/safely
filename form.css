@@ -140,18 +140,6 @@ margin-bottom: 20px;
   width: 400px;
   height: 20px;
 }
-/* #day2 {
-  width: 120px;
-}
-
-#time1 {
-  width: 120px;
-}
-
-#time2 {
-  width: 120px;
-} */
-
 
 .sbutton {
   font-size: 1rem;
@@ -208,15 +196,6 @@ input[type="submit"] :disabled {
     width: 20%;
     justify-content: flex-end;
   }
-
-
-  /* .cardLook {
-    display: flex; */
-    /* flex-wrap: wrap; */
-    /* justify-content: center; */
-    /* width: 100vw; */
-  /* } */
-
 }
 
 

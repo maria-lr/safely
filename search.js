@@ -1,7 +1,8 @@
 const searchButton = $('#searchbutton')
 const searchBar = $('#search');
 
-// Can trigger the search button with the Enter key. Trigger button on enter code from w3Schools:https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp
+// Trigger the search button with the Enter key. 
+// Trigger button on enter code from w3Schools:https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp
 
 // Execute a function when the user releases a key on the keyboard
 searchBar.keyup(function (event) {
@@ -23,10 +24,9 @@ searchButton.click(function (event) {
     return;
   }
 
+  // If there is a value in the search bar, go to the results page w/ attached search term params.
   if (searchTerm) {
-    // console.log('there is a searchTerm:', searchTerm)
     window.location.href = `file:///Users/maria/Documents/Coding%20Projects/Safely/results/results.html?search=${searchTerm}`;
-
   }
 
 });

@@ -28,12 +28,6 @@ function createProfile(place) {
   let hoursBody = $('<p></p>')
     .text(place.hours);
 
-  // let statusHeader = $('<h1></h1>')
-  //   .text('Status');
-
-  // let statusBody = $('<p></p>')
-  //   .text(place.status);
-
   let phoneHeader = $('<h1></h1>')
     .text('Phone');
 
@@ -46,12 +40,6 @@ function createProfile(place) {
   let websiteBody = $('<p></p>')
     .text(place.website);
 
-  // let safetyHeader = $('<h1></h1>')
-  //   .text('Safety');
-
-  // let safetyBody = $('<p></p>')
-  //   .text(place.safety);
-
   let text = $('<div></div>')
     .addClass('text')
 
@@ -63,15 +51,50 @@ function createProfile(place) {
   text.append(addressBody2);
   text.append(hoursHeader);
   text.append(hoursBody);
-  // text.append(statusHeader);
-  // text.append(statusBody);
   text.append(phoneHeader);
   text.append(phoneBody);
   text.append(websiteHeader);
   text.append(websiteBody);
-  // text.append(safetyHeader);
-  // text.append(safetyBody);
   newCard.append(text)
   $('.pitems').append(newCard);
-  console.log('do i work-Profile?')
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // let statusHeader = $('<h1></h1>')
+  //   .text('Status');
+
+  // let statusBody = $('<p></p>')
+  //   .text(place.status);
+
+    // text.append(statusHeader);
+  // text.append(statusBody);
+
+
+
+  // let safetyHeader = $('<h1></h1>')
+  //   .text('Safety');
+
+  // let safetyBody = $('<p></p>')
+  //   .text(place.safety);
+
+  // text.append(safetyHeader);
+  // text.append(safetyBody);

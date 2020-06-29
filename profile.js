@@ -5,23 +5,64 @@ fetch(`https://tiny-lasagna-server.herokuapp.com/collections/mariaTestCollection
     return results.json();
   })
   .then((allDataFromServer) => {
-    console.log("This is everything in our collection!", allDataFromServer)
 
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get('id');
 
-    // Grab the place object using the id
+    // Grab the result from the server with the id matching the search params.
     let placeFromId = allDataFromServer.find(function (item) {
 
-      console.log('The item ID is:', item._id);
       if (item._id === id) {
-        console.log(item)
         return item
       }
+
     });
 
+    // If there's a matching result, create the profile.
     if (placeFromId) {
       createProfile(placeFromId);
     };
 
   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // Comment code beginning?
+
+// async function addNewDataToServer() {
+//   const postOptions = {
+//     method: "POST",
+//     body: JSON.stringify(newPlaceData),
+//     headers: {
+//       'Accept': 'application/json',
+//       'Content-Type': 'application/json'
+//     }
+//   }
+//   // Send our POST request with its options
+//   const postRequest = await fetch('url', postOptions);
+
+//   // Turn our response into JSON
+//   const result = await postRequest.json();
+
+//   // Log it out!
+//   console.log("The result of my POST IS...", result);
+
+// }
+  // addNewDataToServer();

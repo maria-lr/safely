@@ -29,5 +29,4 @@ function createCard(place) {
   textSide.append(addressBody1);
   textSide.append(addressBody2);
   $('.ritems').append(newCard);
-  console.log('do i work?')
 }

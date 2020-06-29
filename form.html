@@ -84,9 +84,10 @@
 
       <section>
         <label for="phone" class="label">Phone:</label><br>
-        <!-- Phone number be in 555-555-5555 format -->
-        <input id="phone" type="text" name="tel" class="input" pattern="\d{3}[\-]\d{3}[\-]\d{4}"
-          data-bouncer-message="Please use the following format: 555-555-5555" placeholder="555-555-5555" required>
+        <!-- Phone number be in (555) 555-5555 format -->
+        <input id="phone" type="text" name="tel" class="input"
+          data-bouncer-message="Please use the following format: (555)555-5555" placeholder="(555) 555-5555"
+          pattern="((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}" required>
       </section><br>
 
       <section>
@@ -112,6 +113,8 @@
 
   <!-- Bouncer form validation script. Get a specific version -->
   <script src="https://cdn.jsdelivr.net/gh/cferdinandi/bouncer@1.4.6/dist/bouncer.polyfills.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 </body>
 
 </html>
