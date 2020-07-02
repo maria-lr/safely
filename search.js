@@ -20,7 +20,6 @@ searchButton.click(function (event) {
 
   // Do not allow search on search button click if the searchbar is empty. 
   if (searchTerm === "") {
-    console.log('bailing early because no search term')
     return;
   }
 
@@ -28,5 +27,4 @@ searchButton.click(function (event) {
   if (searchTerm) {
     window.location.href = `file:///Users/maria/Documents/Coding%20Projects/Safely/results/results.html?search=${searchTerm}`;
   }
-
 });

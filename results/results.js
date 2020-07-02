@@ -1,6 +1,3 @@
-// Create local array.
-let placesArray = []
-
 // Get all data from database.
 fetch(`https://tiny-lasagna-server.herokuapp.com/collections/mariaTestCollection/`)
   .then((results) => {
@@ -8,15 +5,12 @@ fetch(`https://tiny-lasagna-server.herokuapp.com/collections/mariaTestCollection
   })
   .then((allDataFromServer) => {
 
-    // Replace local array (empty) with server array (most current).
-    placesArray = allDataFromServer;
-
     // Boilerplate search parameter code defining search param (the blank in) "?___=". 
     const urlParams = new URLSearchParams(window.location.search);
     const search = urlParams.get('search');
 
     // Find search term (taken from query param) in places array.
-    let searchResults = placesArray.filter(function (place, index) {
+    let searchResults = allDataFromServer.filter(function (place, index) {
 
       // Lowercase the term in the array (to get around case sensitivity).
       const lowerName = place.name.toLowerCase();
@@ -29,7 +23,6 @@ fetch(`https://tiny-lasagna-server.herokuapp.com/collections/mariaTestCollection
 
       // Return the results w/ names that include the search term.
       return lowerName.includes(lowerSearch);
-
     });
 
     // If there are results matching the search, load results.
@@ -39,6 +32,7 @@ fetch(`https://tiny-lasagna-server.herokuapp.com/collections/mariaTestCollection
 
         // For each item in the array create a card. 
         createCard(place);
+
 
         // If result card is clicked, go to corresponding profile page.
         $('.cardContainer').click(function (event) {
@@ -72,4 +66,3 @@ fetch(`https://tiny-lasagna-server.herokuapp.com/collections/mariaTestCollection
       });
     }
   })
-

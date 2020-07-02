@@ -101,6 +101,7 @@ p {
   text-align: center;
   width: 5rem;
   border-radius: .5rem;
+  float: right;
 }
 
 #sent:hover {
@@ -123,6 +124,18 @@ p {
   margin: 0 5% 2% 5%;
 }
 
+.trashC {
+  display: flex;
+  margin: 30px;
+  height: 15px;
+  position: relative;
+}
+
+.trash:hover {
+  color: #CB2797;
+  cursor: pointer;
+}
+
 label {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 700;
@@ -133,8 +146,82 @@ label {
 }
 
 .comment-container {
-  margin: 0 5% 5% 5%;
+  display:flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
+
+.profile-comment-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Post delete styling start*/
+
+.return-button {
+  font-size: 1rem;
+  color: whitesmoke;
+  background-color: #CB2797;
+  padding: 1rem;
+  text-align: center;
+  border-radius: .5rem;
+  margin: 25px;
+}
+
+.return-button:hover {
+  color: #CB2797;
+  background-color: whitesmoke;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.post-delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 300px;
+}
+
+.post-del-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Post delete styling end*/
+
+/* Comment card styling start*/
+
+.posted-comments-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 600px;
+
+}
+
+.comment-area {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  padding: 2.5rem;
+  margin: 1rem;
+  width: 500px;
+}
+
+.comment-message {
+  color: black;
+}
+
+.comments-title {
+  border-top: solid #CB2797 0.75px;
+  padding: 20px;
+  width: 550px;
+  text-align: center;
+}
+
+/* Comment card styling end*/
 
 /* Code below from: https://medium.com/hackernoon/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2 . This, along with the accompanying JS code will allow keyboard-only users to have the ring focus on for buttons. */
 
@@ -171,7 +258,8 @@ body:not(.user-is-tabbing) textarea:focus {
   .pitems {
     display: flex;
     align-items: flex-start;
-    width: 70vw;
+    justify-content: center;
+    /* width: 70%; */
     margin: auto;
   }
 
@@ -186,10 +274,14 @@ body:not(.user-is-tabbing) textarea:focus {
 
   .cardLook {
     display: flex;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 0.5em;
+    height: 400px;
+    /* width: 90%; */
   }
 
   .thumbnail {
-    max-width: 60%;
+    width: 600px;
     border-radius: .5rem;
   }
 
@@ -198,14 +290,13 @@ body:not(.user-is-tabbing) textarea:focus {
   }
 
   #commentbox {
-    width: 90%;
     height: 100px;
   }
 
   .comment-container {
     margin-top: 20px;
-    width: 70vw;
-    margin: auto;
+    width: 100%;
+    /* margin: auto; */
     padding-top: 40px;
   }
 
@@ -228,7 +319,7 @@ body:not(.user-is-tabbing) textarea:focus {
   .profile-page-container{
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 100px;
   }
 
   .pitems-container {
@@ -238,8 +329,47 @@ body:not(.user-is-tabbing) textarea:focus {
   .pitems {
     display: flex;
     align-items: flex-start;
+    justify-content: center;
+    /* width: 70vw; */
+    margin: auto;
   }
 
+  .cardLook {
+    display: flex;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 0.5em;
+    height: 350px;
+    /* width: 100%; */
+  }
+
+  .thumbnail {
+    width: 400px;
+    border-radius: .5rem;
+  }
+
+  .text {
+    align-self: center;
+  }
+
+  .comment-area {
+    width: 400px;
+  }
+
+  #commentbox {
+    height: 100px;
+    width: 500px;
+  }
+
+  .comments-title {
+    width: 400px;
+    text-align: center;
+  }
+
+  .comment-container {
+    margin-top: 20px;
+    margin: auto;
+    padding-top: 40px;
+  }
 
   #search-container{
     width: 45%;
@@ -249,32 +379,6 @@ body:not(.user-is-tabbing) textarea:focus {
     width: 20%;
     justify-content: flex-end;
   }
-  
-  .cardLook {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100vw;
-  }
-
-  .thumbnail {
-    max-width: 70vw;
-    border-radius: .5rem;
-  }
-
-  .text {
-    width: 70vw; 
-  }
-  
-  #commentbox {
-    width: 70vw;
-  }
-
-  .comment-container {
-    width: 70vw;
-    margin: auto;
-  }
-
 }
 
 /* Mobile view */
@@ -288,6 +392,20 @@ body:not(.user-is-tabbing) textarea:focus {
   p {
     font-size: 1rem;
     margin: 0;
+  }
+
+  .comment-area {
+    width: 300px;
+  }
+
+  #commentbox {
+    height: 100px;
+    width: 400px;
+  }
+
+  .comments-title {
+    width: 300px;
+    text-align: center;
   }
 
   .profile-page-container{

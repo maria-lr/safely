@@ -10,7 +10,7 @@
 </head>
 
 <body class="body">
-  <div id="header">
+  <nav id="header">
     <a href="homepage.html">
       <img id="logo" src="./images/safelylogo.png">
     </a>
@@ -21,7 +21,7 @@
     <section class="button-container">
       <button id="topnav" class="openbtn" onclick="openNav()">&#9776;</button>
     </section>
-  </div>
+  </nav>
   <div class="profile-comment-section">
     <section class='profile-page-container' id='profile-page'>
       <section class='pitems-container'>
@@ -31,13 +31,16 @@
     </section>
     <section class='comment-container'>
       <section class='comments'>
-        <label for="commentbox">Comment</label>
+        <label for="commentbox">Write a comment</label>
         <br><br>
-        <textarea id="commentbox" name="commentbox" rows="4" cols="50">
+        <textarea id="commentbox" name="commentbox" rows="5" cols="100">
   </textarea>
         <br><br>
         <input id="sent" type="submit" value="Add">
       </section>
+    </section>
+    <section class='posted-comments-container'>
+      <h1 class='comments-title'>Comments</h1>
     </section>
   </div>
 

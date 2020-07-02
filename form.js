@@ -22,7 +22,6 @@ async function sendDataToServer() {
       'Content-Type': 'application/json'
     }
   }
-  console.log('new place', newPlace)
 
   // Post new place to the server
   const postRequest = await fetch('https://tiny-lasagna-server.herokuapp.com/collections/mariaTestCollection', postOptions);
@@ -30,10 +29,7 @@ async function sendDataToServer() {
   // Response from the server + id
   const result = await postRequest.json();
 
-  console.log("The id of my newly created post is", result._id);
-
   window.location.href = `file:///Users/maria/Documents/Coding%20Projects/Safely/profile.html?id=${result._id}`;
-
 };
 
 document.addEventListener('bouncerFormValid', sendDataToServer)

@@ -43,6 +43,12 @@ function createProfile(place) {
   let text = $('<div></div>')
     .addClass('text')
 
+  let trashButton = $('<i></i>')
+    .addClass('fas fa-trash-alt trash')
+
+  let trashContainer = $('<div></div>')
+    .addClass('trashC')
+
   newCard.append(thumbnail);
   text.append(nameHeader);
   text.append(nameBody);
@@ -55,8 +61,49 @@ function createProfile(place) {
   text.append(phoneBody);
   text.append(websiteHeader);
   text.append(websiteBody);
-  newCard.append(text)
+  trashContainer.append(trashButton);
+  newCard.append(text);
+  newCard.append(trashContainer);
   $('.pitems').append(newCard);
+  // $('.pitems').append(text);
+  // $('.pitems').append(trashContainer);
+
+  $('.trash').click(function (event) {
+    console.log('beep')
+    // - Deleting data from the server
+    // You need to pass a method of DELETE as your body, as well as the ID of the thing you want to delete as part of the URL
+    // CODE BELOW:
+    fetch(`https://tiny-lasagna-server.herokuapp.com/collections/mariaTestCollection/${place._id}`, {
+      method: "DELETE"
+    }).then(response => {
+      return response.json();
+    }).then((returnValue) => {
+      console.log("We deleted something from the server", returnValue)
+    })
+    const postDelContainer = $('<div></div>')
+      .addClass('post-del-container')
+
+    const postDelete = $('<section></section>')
+      .addClass('post-delete');
+
+    const delMessage = $('<p></p>')
+      .html(`You successfully deleted this profile.<br>`)
+      .addClass('message');
+
+    const returnButton = $('<button></button>')
+      .text('Return to home')
+      .addClass('return-button');
+
+    postDelContainer.append(postDelete);
+    postDelete.append(delMessage);
+    postDelete.append(returnButton);
+
+    $('.profile-comment-section').replaceWith(postDelContainer);
+
+    returnButton.click(function (event) {
+      window.location.href = `file:///Users/maria/Documents/Coding%20Projects/Safely/homepage.html`
+    })
+  });
 }
 
 
