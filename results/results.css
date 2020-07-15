@@ -38,6 +38,7 @@ p {
 
 #logo {
   width: 100px;
+  padding-top: 10px;
 }
 
 #header {
@@ -127,6 +128,7 @@ p {
   color: #CB2797;
   background-color: whitesmoke;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 
 .no-res-inner {
