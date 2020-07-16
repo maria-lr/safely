@@ -25,8 +25,23 @@ fetch(`https://tiny-lasagna-server.herokuapp.com/collections/mariaTestCollection
       return lowerName.includes(lowerSearch);
     });
 
+    console.log("What is searchResults.lenght?", searchResults.length)
+
     // If there are results matching the search, load results.
     if (searchResults.length) {
+
+      const resPgCon = $('<section></section>')
+        .addClass('results-page-container')
+
+      const resItCon = $('<section></section>')
+        .addClass('ritems-container')
+
+      const rItems = $('<section></section>')
+        .addClass('ritems')
+
+      $('body').append(resPgCon);
+      resPgCon.append(resItCon);
+      resItCon.append(rItems);
 
       searchResults.forEach(function (place) {
         // For each item in the array create a card. 
@@ -37,6 +52,11 @@ fetch(`https://tiny-lasagna-server.herokuapp.com/collections/mariaTestCollection
 
     // If no results match the search, replace results area w/ no results message and add place button.
     else {
+
+      console.log("ELSE IS RUNNING")
+
+      const noResCon = $('<section></section>')
+        .addClass('no-results-container')
 
       const noResInner = $('<section></section>')
         .addClass('no-res-inner');
@@ -49,7 +69,8 @@ fetch(`https://tiny-lasagna-server.herokuapp.com/collections/mariaTestCollection
         .text('Add new place')
         .addClass('add-place-button');
 
-      $('.no-results-container').append(noResInner);
+      $('body').append(noResCon);
+      noResCon.append(noResInner);
       noResInner.append(noResMessage);
       noResInner.append(addPlaceButton);
 

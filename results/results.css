@@ -215,6 +215,8 @@ body:not(.user-is-tabbing) textarea:focus {
   }
 
   .results-page-container {
+    width: 85vw;
+    min-height: 100vh;
     margin-top: 60px;
   }
 
