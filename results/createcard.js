@@ -3,8 +3,8 @@ function createCard(place) {
   let newCard = $('<div></div>')
     .addClass('cardContainer');
 
-  let thumbnail = $('<img>')
-    .attr('src', place.thumbnail)
+  let thumbnail = $('<section></section>')
+    .css('background-image', `url(${place.thumbnail})`)
     .addClass('thumbnail')
 
   let textSide = $('<div></div>')
@@ -21,6 +21,11 @@ function createCard(place) {
 
   let nameBody = $('<p></p>')
     .text(place.description);
+
+  // If result card is clicked, go to corresponding profile page.
+  newCard.click(function (event) {
+    window.location.href = `file:///Users/maria/Documents/Coding%20Projects/Safely/profile.html?id=${place._id}`
+  })
 
   newCard.append(thumbnail);
   newCard.append(textSide);

@@ -228,6 +228,10 @@ label {
   text-align: center;
 }
 
+.thumbnail {
+  background-size: cover;
+}
+
 /* Comment card styling end*/
 
 /* Code below from: https://medium.com/hackernoon/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2 . This, along with the accompanying JS code will allow keyboard-only users to have the ring focus on for buttons. */
@@ -433,7 +437,7 @@ body:not(.user-is-tabbing) textarea:focus {
 
   .trashC{
     position: absolute;
-    top: 15%;
+    top: 8%;
     left: 0;
   }
 
@@ -455,7 +459,17 @@ body:not(.user-is-tabbing) textarea:focus {
   }
 
   .thumbnail {
+    padding-top:100px;
     width: 100%;
+    height: 33vh;
+  }
+
+  .comments {
+    margin-top: 1.5rem;
+  }
+
+  .text {
+    text-align: center;
   }
 
 }

@@ -29,15 +29,9 @@ fetch(`https://tiny-lasagna-server.herokuapp.com/collections/mariaTestCollection
     if (searchResults.length) {
 
       searchResults.forEach(function (place) {
-
         // For each item in the array create a card. 
         createCard(place);
 
-
-        // If result card is clicked, go to corresponding profile page.
-        $('.cardContainer').click(function (event) {
-          window.location.href = `file:///Users/maria/Documents/Coding%20Projects/Safely/profile.html?id=${place._id}`
-        })
       });
     }
 

@@ -3,8 +3,8 @@ function createProfile(place) {
   let newCard = $('<div></div>')
     .addClass('cardLook');
 
-  let thumbnail = $('<img>')
-    .attr('src', place.thumbnail)
+  let thumbnail = $('<section></section>')
+    .css('background-image', `url(${place.thumbnail})`)
     .addClass('thumbnail')
 
   let nameHeader = $('<h1></h1>')

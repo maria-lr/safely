@@ -107,6 +107,7 @@ p {
 
 .thumbnail {
   border-radius: .5rem 0 0 .5rem;
+  background-size: cover;
 }
 
 .results-page-container {
@@ -198,6 +199,7 @@ body:not(.user-is-tabbing) textarea:focus {
 
   .thumbnail {
     width: 45%;
+    height: 25vh;
   }
 
   .textside{
@@ -229,6 +231,7 @@ body:not(.user-is-tabbing) textarea:focus {
 
   .thumbnail {
     width: 45%;
+    height: 30vh;
   }
 
   .cardContainer {
@@ -277,6 +280,7 @@ body:not(.user-is-tabbing) textarea:focus {
 
   .thumbnail {
     width: 45%;
+    height: 20vh;
   }
 
   .textside {
