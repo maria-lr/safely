@@ -111,8 +111,48 @@ p {
 }
 
 .results-page-container {
-  margin-top: 100px;
+  margin-top: 60px;
+  width: 85vw;
+  float: right;
+  background-color: #92C6E9;
 }
+
+/* filter panel start */
+
+.filter {
+  width: 15vw;
+  position: absolute;
+  background-color: white;
+}
+
+.filter-container {
+  width: 15vw;
+  margin-top: 35vh;
+  margin-left: 15px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+}
+
+#submit {
+  font-size: 1rem;
+  color: whitesmoke;
+  background-color: #CB2797;
+  padding: 1rem;
+  text-align: center;
+  width: 5rem;
+  border-radius: .5rem;
+  margin-left: 15px;
+  margin-top: 20px;
+}
+
+#submit:hover {
+  cursor: pointer;
+  color: #CB2797;
+  background-color: whitesmoke;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* filter panel end */
 
 /* No results section styling - appears if no results found in search bar*/
 .add-place-button {
@@ -175,7 +215,7 @@ body:not(.user-is-tabbing) textarea:focus {
   }
 
   .results-page-container {
-    margin-top: 100px;
+    margin-top: 60px;
   }
 
   #button-container{
@@ -185,12 +225,14 @@ body:not(.user-is-tabbing) textarea:focus {
 
   .ritems-container {
     width: 50%;
+    padding-top: 15px;
     /* text-align: center; */
     margin: auto;
   }
 
   .cardContainer{
-    margin: 20px 20px 40px 20px;
+    margin: 20px 20px 20px 20px;
+    background: white;
   }
 
   .cardContainer:hover {
