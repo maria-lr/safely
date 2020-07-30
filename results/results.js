@@ -25,7 +25,7 @@ fetch(`https://tiny-lasagna-server.herokuapp.com/collections/mariaTestCollection
       return lowerName.includes(lowerSearch);
     });
 
-    console.log("What is searchResults.lenght?", searchResults.length)
+    console.log("What is searchResults.length?", searchResults.length)
 
     // If there are results matching the search, load results.
     if (searchResults.length) {
@@ -80,4 +80,78 @@ fetch(`https://tiny-lasagna-server.herokuapp.com/collections/mariaTestCollection
         window.location.href = 'file:///Users/maria/Documents/Coding%20Projects/Safely/form.html';
       });
     }
+
+    // On Filter button click...
+    ($("#filter").click(function (event) {
+
+      // Filter array for type of places that have been checked.
+      let filterResults = allDataFromServer.filter(function (place, index) {
+
+        const checkedSupermarket = $("#supermarket").is(":checked");
+        const checkedPark = $("#park").is(":checked");
+        const checkedTourist = $("#tourist").is(":checked");
+        const checkedRetail = $("#retail").is(":checked");
+        const checkedRestaurant = $("#restaurant").is(":checked");
+
+        // Two booleans per type of place: Is the check box checked && is the array item's description the corresponding description to the checkbox? 
+        if (
+          checkedSupermarket && place.description === "Supermarket"
+          || checkedPark && place.description === "Park"
+          || checkedTourist && place.description === "Tourist attraction"
+          || checkedRetail && place.description === "Retail"
+          || checkedRestaurant && place.description === "Restaurant"
+        ) {
+          return true
+        }
+        else {
+          return false
+        }
+      })
+
+      console.log("Filter Results", filterResults)
+
+      // 
+      if (filterResults.length) {
+        $(".ritems").empty();
+
+        filterResults.forEach(function (place) {
+          // For each item in the array create a card. 
+          createCard(place);
+        });
+      }
+      else {
+
+        const noResCon = $('<section></section>')
+          .addClass('no-results-container')
+
+        const noResInner = $('<section></section>')
+          .addClass('no-res-inner');
+
+        const noResMessage = $('<p></p>')
+          .html(`Sorry, no results match this search.<br>`)
+          .addClass('message');
+
+        const addPlaceButton = $('<button></button>')
+          .text('Add new place')
+          .addClass('add-place-button');
+
+        $('body').append(noResCon);
+        noResCon.append(noResInner);
+        noResInner.append(noResMessage);
+        noResInner.append(addPlaceButton);
+
+        $(".results-page-container").replaceWith(noResCon);
+
+        // Go to forms page when add place button is clicked.
+        $('.add-place-button').click(function (event) {
+
+          window.location.href = 'file:///Users/maria/Documents/Coding%20Projects/Safely/form.html';
+        });
+      }
+
+
+    }))
+
   })
+
+

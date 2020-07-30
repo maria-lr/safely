@@ -111,48 +111,9 @@ p {
 }
 
 .results-page-container {
-  margin-top: 60px;
-  width: 85vw;
   float: right;
   background-color: #92C6E9;
 }
-
-/* filter panel start */
-
-.filter {
-  width: 15vw;
-  position: absolute;
-  background-color: white;
-}
-
-.filter-container {
-  width: 15vw;
-  margin-top: 35vh;
-  margin-left: 15px;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
-}
-
-#submit {
-  font-size: 1rem;
-  color: whitesmoke;
-  background-color: #CB2797;
-  padding: 1rem;
-  text-align: center;
-  width: 5rem;
-  border-radius: .5rem;
-  margin-left: 15px;
-  margin-top: 20px;
-}
-
-#submit:hover {
-  cursor: pointer;
-  color: #CB2797;
-  background-color: whitesmoke;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-}
-
-/* filter panel end */
 
 /* No results section styling - appears if no results found in search bar*/
 .add-place-button {
@@ -215,7 +176,7 @@ body:not(.user-is-tabbing) textarea:focus {
   }
 
   .results-page-container {
-    width: 85vw;
+    width: 80vw;
     min-height: 100vh;
     margin-top: 60px;
   }
@@ -228,7 +189,6 @@ body:not(.user-is-tabbing) textarea:focus {
   .ritems-container {
     width: 50%;
     padding-top: 15px;
-    /* text-align: center; */
     margin: auto;
   }
 
@@ -249,6 +209,43 @@ body:not(.user-is-tabbing) textarea:focus {
   .textside{
     margin-left: 10%;
   }
+
+  /* filter panel start */
+
+.filter {
+  width: 20vw;
+  position: absolute;
+  background-color: white;
+}
+
+.filter-container {
+  width: 20vw;
+  margin-top: 35vh;
+  margin-left: 15px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+}
+
+#filter {
+  font-size: 1rem;
+  color: whitesmoke;
+  background-color: #CB2797;
+  padding: 1rem;
+  text-align: center;
+  width: 5rem;
+  border-radius: .5rem;
+  margin-left: 15px;
+  margin-top: 20px;
+}
+
+#filter:hover {
+  cursor: pointer;
+  color: #CB2797;
+  background-color: whitesmoke;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* filter panel end */
 
 }
 
@@ -280,11 +277,53 @@ body:not(.user-is-tabbing) textarea:focus {
 
   .cardContainer {
     margin: 20px;
+    background: white;
   }
 
   .textside {
     margin-left: 20px;
   }
+
+  .results-page-container {
+    width: 80vw;
+  }
+
+  /* filter panel start */
+
+.filter {
+  width: 20vw;
+  position: absolute;
+  background-color: white;
+}
+
+.filter-container {
+  width: 20vw;
+  margin-top: 35vh;
+  margin-left: 15px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+}
+
+#filter {
+  font-size: 1rem;
+  color: whitesmoke;
+  background-color: #CB2797;
+  padding: 1rem;
+  text-align: center;
+  width: 5rem;
+  border-radius: .5rem;
+  margin-left: 15px;
+  margin-top: 20px;
+}
+
+#filter:hover {
+  cursor: pointer;
+  color: #CB2797;
+  background-color: whitesmoke;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* filter panel end */
 }
 
 /* Mobile view */
@@ -302,7 +341,8 @@ body:not(.user-is-tabbing) textarea:focus {
   .results-page-container{
     display: flex;
     justify-content: center;
-    margin-top: 15%;
+    margin-top: 5%;
+    width: 100%;
   }
 
   .ritems-container {
@@ -320,6 +360,7 @@ body:not(.user-is-tabbing) textarea:focus {
 
   .cardContainer{
     margin: 20px;
+    background: white;
   }
 
   .thumbnail {
@@ -331,5 +372,45 @@ body:not(.user-is-tabbing) textarea:focus {
     text-align: left;
     margin-left: 20px;
   }
+
+  /* filter panel start */
+
+.filter {
+  width: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 15vh;
+}
+
+.filter-container {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+#filter {
+  font-size: 1rem;
+  color: whitesmoke;
+  background-color: #CB2797;
+  padding: 1rem;
+  text-align: center;
+  width: 5rem;
+  border-radius: .5rem;
+  margin-left: 15px;
+  margin-top: 20px;
+}
+
+#filter:hover {
+  cursor: pointer;
+  color: #CB2797;
+  background-color: whitesmoke;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* filter panel end */
 
 }
