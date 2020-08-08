@@ -154,6 +154,7 @@ label {
 
 .comment-container {
   display:flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 20px;
 }
@@ -207,6 +208,7 @@ label {
   flex-wrap: wrap;
   justify-content: center;
   width: 600px;
+  margin-bottom: 2rem;
 
 }
 

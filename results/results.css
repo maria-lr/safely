@@ -214,7 +214,7 @@ body:not(.user-is-tabbing) textarea:focus {
 
 .filter {
   width: 20vw;
-  position: absolute;
+  position: fixed;
   background-color: white;
 }
 
@@ -285,19 +285,19 @@ body:not(.user-is-tabbing) textarea:focus {
   }
 
   .results-page-container {
-    width: 80vw;
+    width: 75vw;
   }
 
   /* filter panel start */
 
 .filter {
-  width: 20vw;
-  position: absolute;
+  width: 25vw;
+  position: fixed;
   background-color: white;
 }
 
 .filter-container {
-  width: 20vw;
+  width: 25vw;
   margin-top: 35vh;
   margin-left: 15px;
   font-family: 'Source Sans Pro', sans-serif;
@@ -377,6 +377,7 @@ body:not(.user-is-tabbing) textarea:focus {
 
 .filter {
   width: 150px;
+  /* position: fixed; */
   display: flex;
   flex-wrap: wrap;
   background-color: white;

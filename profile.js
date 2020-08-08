@@ -58,36 +58,36 @@ fetch(`https://tiny-lasagna-server.herokuapp.com/collections/commentTestCollecti
 
 
 
-// Start of adding comments to database code
-// Define data to post to db.
-function comment() {
-  let newComment = {
-    placeId: id,
-    comment: $('#commentbox').val()
-  }
+// // Start of adding comments to database code
+// // Define data to post to db.
+// function comment() {
+//   let newComment = {
+//     placeId: id,
+//     comment: $('#commentbox').val()
+//   }
 
-  // Send new comments to server
-  fetch(`https://tiny-lasagna-server.herokuapp.com/collections/commentTestCollection/`, {
-    method: "POST",
-    body: JSON.stringify(newComment),
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    }
-  })
-    .then((results) => {
-      return results.json();
-    })
-    .then((commentResult) => {
-      console.log('This is the post result', commentResult)
-      location.reload();
-    })
-}
+//   // Send new comments to server
+//   fetch(`https://tiny-lasagna-server.herokuapp.com/collections/commentTestCollection/`, {
+//     method: "POST",
+//     body: JSON.stringify(newComment),
+//     headers: {
+//       'Accept': 'application/json',
+//       'Content-Type': 'application/json'
+//     }
+//   })
+//     .then((results) => {
+//       return results.json();
+//     })
+//     .then((commentResult) => {
+//       console.log('This is the post result', commentResult)
+//       location.reload();
+//     })
+// }
 
-// Run send when button is clicked.
-$('#sent').click(function (event) {
-  comment();
-})
+// // Run send when button is clicked.
+// $('#sent').click(function (event) {
+//   comment();
+// })
 
 
 

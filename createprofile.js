@@ -49,6 +49,42 @@ function createProfile(place) {
   let trashContainer = $('<div></div>')
     .addClass('trashC')
 
+  let commentContainer = $('<section></section>')
+    .addClass('comment-container')
+
+  let comments = $('<section></section>')
+    .addClass('comments')
+
+  let commentsLabel = $('<label></label>')
+    .attr('for', 'commentbox')
+    .html('Write a comment<br><br>')
+
+  // append wherever want linebreak(especially after commentbox)
+
+  let commentBox = $('<textarea></textarea>')
+    .attr({
+      id: 'commentbox',
+      name: 'commentbox',
+      rows: '5',
+      cols: '100'
+    })
+
+  let addButton = $('<input>')
+    .attr({
+      id: 'sent',
+      type: 'submit',
+      value: 'Add'
+    })
+    .html('<br><br>')
+
+  let myLinebreak = $('<br><br>');
+
+  let postedComments = $('<section></section>')
+    .addClass('posted-comments-container')
+
+  let commentsTitle = $('<h1>Comments</h1>')
+    .addClass('comments-title')
+
   newCard.append(thumbnail);
   text.append(nameHeader);
   text.append(nameBody);
@@ -65,6 +101,15 @@ function createProfile(place) {
   newCard.append(text);
   newCard.append(trashContainer);
   $('.pitems').append(newCard);
+  $('.profile-comment-section').append(commentContainer);
+  commentContainer.append(comments);
+  comments.append(commentsLabel);
+  comments.append(commentBox);
+  comments.append(myLinebreak);
+  comments.append(addButton);
+  $('.profile-comment-section').append(postedComments);
+  postedComments.append(commentsTitle);
+
   // $('.pitems').append(text);
   // $('.pitems').append(trashContainer);
 
@@ -104,6 +149,38 @@ function createProfile(place) {
       window.location.href = `file:///Users/maria/Documents/Coding%20Projects/Safely/homepage.html`
     })
   });
+
+  // Start of adding comments to database code
+  // Define data to post to db.
+  function comment() {
+    let newComment = {
+      placeId: id,
+      comment: $('#commentbox').val()
+    }
+
+    // Send new comments to server
+    fetch(`https://tiny-lasagna-server.herokuapp.com/collections/commentTestCollection/`, {
+      method: "POST",
+      body: JSON.stringify(newComment),
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    })
+      .then((results) => {
+        return results.json();
+      })
+      .then((commentResult) => {
+        console.log('This is the post result', commentResult)
+        location.reload();
+      })
+  }
+
+  // Run send when button is clicked.
+  $('#sent').click(function (event) {
+    comment();
+  })
+
 }
 
 
