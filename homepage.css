@@ -11,7 +11,8 @@ html {
 h1 {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 700;
-  color: #CB2797;
+  color: white;
+  text-shadow: 2px 2px #E553CF;
 }
 
 p {
@@ -20,7 +21,9 @@ p {
 }
 
 #searchbutton:hover {
-  color: whitesmoke;
+  border: #EB74D8 solid 1px;
+  text-shadow: 2px 2px #EB74D8;
+  background-color: rgb(255, 255, 255, 0);
 }
 
 #header {
@@ -51,7 +54,7 @@ p {
 }
 
 .front-page-container {
-  background-color: #92C6E9;
+  background: url(./united-nations-covid-19-response-vDs7KenVpw0-unsplash.jpg);
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -71,12 +74,15 @@ p {
 
 #searchbutton {
   font-size: 1.2em;
-  color: #CB2797;
-  background-color: rgb(255, 255, 255, 0);
+  color: white;
+  background-color: #EB74D8;
+  text-shadow: 2px 2px #02071D;
   padding: 1rem;
   text-align: center;
-  width: 2rem;
-  margin-left: .2rem;
+  border-radius: 0 .5rem .5rem 0;
+  border: #EB74D8 solid 1px;
+  height: 4rem;
+  /* margin: 10px; */
 }
 
 /* Code below from: https://medium.com/hackernoon/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2 . This, along with the accompanying JS code will allow keyboard-only users to have the ring focus on for buttons. */
@@ -93,6 +99,7 @@ body:not(.user-is-tabbing) textarea:focus {
   /* Front page */
   h1 {
     font-size: 2.5rem;
+    margin-bottom: 1rem;
   }
 
   p {
@@ -109,14 +116,12 @@ body:not(.user-is-tabbing) textarea:focus {
     font-weight: 400;
     font-size: 1.5rem;
     color: black;
-    background-color:  whitesmoke;
+    background-color: whitesmoke;
     max-width: 55rem;
     min-width: 45rem;
     height: 4rem;
-    margin-left: 1.5rem;
-    margin-right: .5rem;
     padding-left: 1rem;
-    border-radius: .4rem;
+    border-radius: .5rem 0 0 .5rem;
   }
 
   #search-container{
@@ -158,14 +163,19 @@ body:not(.user-is-tabbing) textarea:focus {
 @media only screen and (min-width: 561px) and (max-width: 1024px) {
   h1 {
     font-size: 2.2rem;
+    margin-bottom: .8rem;
   }
 
   p {
     font-size: 1rem;
   }
 
+  .front-page-container {
+    background-size: cover;
+  }
+
   .fpitems-container {
-    width: 70%;
+    width: 80%;
     text-align: center;
   }
 
@@ -177,10 +187,8 @@ body:not(.user-is-tabbing) textarea:focus {
     min-width: 25rem;
     max-width: 45rem;
     height: 4rem;
-    margin-left: 1.5rem;
-    margin-right: .2rem;
     padding-left: 1rem;
-    border-radius: .4rem;
+    border-radius: .5rem 0 0 .5rem;
   }
 
   #search-container{
@@ -227,6 +235,10 @@ body:not(.user-is-tabbing) textarea:focus {
     font-size: 1rem;
   }
 
+  .front-page-container {
+    background-size: cover;
+  }
+
   .fpitems-container {
     width: 80%;
     text-align: center;
@@ -240,11 +252,11 @@ body:not(.user-is-tabbing) textarea:focus {
     width: 20rem;
     height: 4rem;
     margin-top: 1rem;
-    margin-left: 1.5rem;
+    /* margin-left: 1.5rem; */
     margin-bottom: 0.5rem;
     margin-right: .2rem;
     padding-left: 1rem;
-    border-radius: .4rem;
+    border-radius: .5rem;
   }
 
   #search-container{
@@ -254,6 +266,11 @@ body:not(.user-is-tabbing) textarea:focus {
   #button-container{
     width: 20%;
     justify-content: flex-end;
+  }
+
+  #searchbutton {
+    width: 21rem;
+    border-radius: .5rem;
   }
 
     /* Placeholder color code from w3schools:  https://www.w3schools.com/howto/howto_css_placeholder.asp*/
